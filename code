@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int x,y;
+	printf("Type two numbers those you expect to swap(spaced in between) and then press ENTER: ");
+	scanf("%d",&x);                                                             /* Get 1st number as input */
+	scanf("%d",&y);                                                            /* Get 2nd number as input */
+	printf("\a\nThe numbers before swap are X:%d & Y:%d",x,y);
+	/*Lets assume input is x=X and y=Y */
+	x=x+y;           /*   x=X+Y  */
+	y=x-y;          /*    y=X as (y=X+Y-Y) */
+	x=x-y;         /*     x=Y as (x=x-y=X+Y-X)*/
+	printf("\nThe numbers after swap are X:%d & Y:%d",x,y);                /* voila they are swapped and result is on screen*/
+	return 0;
+}
